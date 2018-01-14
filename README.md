@@ -1,4 +1,4 @@
-# Digital-Ocean-how-To-Set-Up-a-Node.js-Application-for-Production-on-Ubuntu-16.04
+# Digital Ocean how To Set Up a Node.js Application for Production on Ubuntu 16.04
 
 
 ## If you don't have one SSH key already set
