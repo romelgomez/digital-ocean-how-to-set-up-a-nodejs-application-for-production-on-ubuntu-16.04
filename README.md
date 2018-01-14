@@ -46,9 +46,11 @@ Firewall is active and enabled on system startup
 ```
 ## Add nginx repository
 
+```
 sudo add-apt-repository ppa:nginx/stable
 sudo apt-get update
-        
+```
+
 ## Install nginx
 
 `$ apt install nginx-full`
