@@ -237,14 +237,6 @@ The startup subcommand generates and configures a startup script to launch PM2 a
 
 `$ pm2 startup systemd`
 
-The last line of the resulting output will include a command that you must run with superuser privileges:
-
-```
-[PM2] Init System found: systemd
-[PM2] To setup the Startup Script, copy/paste the following command:
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u newuser --hp /home/newuser
-```
-
 More at https://github.com/Unitech/pm2
 
 ### Set Up Nginx as a Reverse Proxy Server
