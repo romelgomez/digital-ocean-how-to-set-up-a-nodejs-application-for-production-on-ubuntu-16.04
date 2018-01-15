@@ -304,16 +304,20 @@ Open the file **nginx.conf**
 
 `$ nano /etc/nginx/nginx.conf`
 
-**Uncomment**
+**Uncomment and add <gunzip on;> <gzip_static on;>**
 
 ``` 
         gzip_vary on;
-        gzip_proxied any;
+        gunzip on;
+        gzip_static  on;
+	gzip_proxied any;
         gzip_comp_level 6;
         gzip_buffers 16 8k;
         gzip_http_version 1.1;
         gzip_types text/plain text/css application/json application/javascript text/xml application/xml$
 ```
+
+
 **You can save and close the file by hitting Ctrl-X, followed by Y, and then Enter to confirm.**
 
 Make sure you didn't introduce any syntax errors by typing:
