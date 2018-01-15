@@ -403,7 +403,7 @@ Add to github ssh keys. https://github.com/settings/keys
 
 The folder must be empty.
 
-Take into account the dot at the end of the line, "`git clone git@github.com:repository-name.git` **.**", That is for clone in the same folder, e.g you are in /www/html, then clone de repository as I say previously, and all the files will be there without repository folder name.    
+Take into account the dot at the end of the line, "`git clone git@github.com:repository-name.git .`", That is for clone in the same folder, e.g you are in /www/html, then clone de repository as I say previously, and all the files will be there without repository folder name.    
 
 Everytime you modified the process that run as deamon e.g: server/app.js, index.js. You have to stop, delete an start again to see the changes. 
 
