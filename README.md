@@ -387,3 +387,34 @@ newuser ALL=(ALL:ALL) ALL
 More at: 
 [How to add and delete users on ubuntu 16 04](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04)
 [Initial server setup with ubuntu 16-04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04)
+
+
+## Workflow with git
+
+Generate ssh key in the server
+
+[Generating a new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key)
+
+Copy `cat ~/.ssh/id_rsa.pub`
+
+Add to github ssh keys. https://github.com/settings/keys
+
+`git clone git@github.com:repository-name.git .` 
+
+The folder must be empty.
+
+Take into account the dot at the end of the line, git clone git@github.com:repository-name.git **.**, That is for clone in the same folder, e.g you are in /www/html, then clone de repository as I say previously, and all the files will be there without repository folder name.    
+
+Everytime you modified the process that run as deamon e.g: server/app.js, index.js. You have to stop, delete an start again to see the changes. 
+
+```
+$ pm2 list                      # List all processes started with PM2
+$ pm2 stop 0                    # Stop process with id 0
+$ pm2 stop all                  # Stop all apps
+$ pm2 delete 0                  # Delete app with id 0
+$ pm2 start app.js              # Start, Daemonize and auto-restart application (Node)
+```
+
+More at https://github.com/Unitech/pm2#commands-overview
+
+**When you update the repository in github, to update the server files, only do `git pull`, you will see the last changes.**    
