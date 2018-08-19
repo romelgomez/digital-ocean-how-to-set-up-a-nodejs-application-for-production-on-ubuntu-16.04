@@ -154,7 +154,10 @@ If you get any errors, reopen the file and check for typos, then test it again.
 
 Once your configuration's syntax is correct, reload Nginx to load the new configuration.
 
-`$ sudo systemctl reload nginx`
+```
+$ sudo service nginx restart
+$ sudo systemctl reload nginx
+```
 
 More at: [How to secure nginx with let s encrypt on ubuntu 16-04 - Setting up nginx](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04#step-2-%E2%80%94-setting-up-nginx)
 
